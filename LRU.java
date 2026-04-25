@@ -25,7 +25,7 @@ public class LRU<K,V> {
 
     public void put(Node<K,V>node) {
         if(map.containsKey(node.key)) {
-            Node<K,V>nNode = map.get(node);
+            Node<K,V>nNode = map.get(node.key);
             nNode.value = node.value;
             dll.get(nNode);
 
